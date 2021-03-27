@@ -63,9 +63,14 @@ const TodayScreen = () => {
 
             const status = json.weather[0].description;
 
+            console.log(status);
+
             switch (status) {
               case "clear sky":
                 setWeatherStatus("날씨가 좋아요. 외출은 어때요?");
+                break;
+              case "moderate rain":
+                setWeatherStatus("비가 오고 있어요. 우산은 챙기셨나요?");
                 break;
               case "few clouds":
                 setWeatherStatus("조금 흐리네요. 감기 조심하세요.");
